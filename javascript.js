@@ -74,23 +74,23 @@ var userUpCase = prompt ("Do you require upper case characters? Choose 'y' or 'n
 
     // user character choices>>>>
     
-    function ()userSpecChar === 'y';{
+    function ()userSpecChar{
         var computerChoiceSpecChar = specChar[Math.floor(Math.random() * specChar.length)];
     // push to passwordArray
     }
            
-    function (userNumericChar === 'y';){
+    function (userNumericChar){
         var computerChoice = numbers[Math.floor(Math.random() * 10)];
         // push to passwordArray
 
     } 
 
-    function (userLowChar === 'y'; ){
+    function (userLowChar){
         var computerChoice = lowCase[Math.floor(Math.random() * lowCase.length)];
         //push to passwordArray
     }
 
-    function (userUpCase === 'y';){
+    function (userUpCase){
         var computerChoice = upCase[Math.floor(Math.random() * upCase.length)];  
         // push to passwordArray
 

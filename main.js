@@ -32,6 +32,8 @@ var userLowChar = confirm ("Do you require lower case characters? Choose 'y' or 
 var userUpCase = confirm ("Do you require upper case characters? Choose 'y' or 'n'.")
 
 
+
+
 // taking prompts and confirms putting in an object for later use
  var passwordOption = {
      length: userLengthChoice,
@@ -42,16 +44,21 @@ var userUpCase = confirm ("Do you require upper case characters? Choose 'y' or '
  }
 return passwordOption  //returned object
 }
+
+
+
+
+
 //math for ramdonizing
 function randomize(placeholderArray){
 
         var randomIndex = Math.floor(Math.random() * placeholderArray.length);
         var element = placeholderArray[randomIndex];
         return element;
+        
+    }
 
 
-
-}
 function createPassword(){
     var options = guestOptions();
    // creating pools of random characters, user chosen characters and eventual password 
@@ -70,6 +77,15 @@ if (options.number){
     chosenChar.push(randomize(numbers));
 }
 
+if (options.lower){
+    possibilities = possibilities.concat(lowCase);
+    chosenChar.push(randomize(lowCase));
+}
+
+if (options.upper){
+    possibilities = possibilities.concat(upCase);
+    chosenChar.push(randomize(upCase));
+}
 for (var i = 0; i <options.length; i++){
     var  potential = randomize (possibilities);
     passwordResult.push(potential); //yoda style
@@ -87,4 +103,3 @@ return passwordResult.join("");
 
 alert(createPassword())
 
-console.log(randomize(lowCase))
